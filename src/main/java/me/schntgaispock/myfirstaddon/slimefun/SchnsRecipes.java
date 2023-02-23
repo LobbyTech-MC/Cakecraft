@@ -22,6 +22,16 @@ public class SchnsRecipes {
             this.recipeType = recipeType;
             this.recipe = recipe;
         }
+
+		public @NonNull RecipeType getRecipeType() {
+			// TODO Auto-generated method stub
+			return recipeType;
+		}
+
+		public @NonNull ItemStack[] getRecipe() {
+			// TODO Auto-generated method stub
+			return recipe;
+		}
     }
 
     public static final Recipe FIRE_CAKE = new Recipe(
