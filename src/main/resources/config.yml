@@ -1,1 +1,2 @@
-auto-update: true
+options:
+  auto-update: false

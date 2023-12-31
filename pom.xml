@@ -2,7 +2,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>me.schntgaispock</groupId>
-    <artifactId>MyFirstAddon</artifactId>
+    <artifactId>MyFirstAddon-CakeCraft</artifactId>
     <version>1.0.0</version>
 
     <properties>
@@ -96,7 +96,7 @@
         <dependency>
             <groupId>com.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-32</version>
+            <version>RC-35</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
