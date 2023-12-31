@@ -9,7 +9,7 @@ public class MyFirstAddon extends AbstractAddon {
     private static MyFirstAddon instance;
 
     public MyFirstAddon() {
-        super("SchnTgaiSpock", "MyFirstAddon", "master", "auto-update");
+        super("SchnTgaiSpock", "MyFirstAddon", "master", "options.auto-update");
     }
 
     public static MyFirstAddon getInstance() {
