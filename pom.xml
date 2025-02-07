@@ -38,6 +38,13 @@
                 <configuration>
                     <!-- This will exclude any unused classes from libraries to reduce file size, not required -->
                     <minimizeJar>true</minimizeJar>
+                    <relocations>
+                        <!-- This is the relocation, make sure to replace the package name, REQUIRED -->
+                        <relocation>
+                            <pattern>io.github.mooy1.infinitylib</pattern>
+                            <shadedPattern>me.schntgaispock.infinitylib</shadedPattern>
+                        </relocation>
+                    </relocations>
                     <filters>
                         <filter>
                             <artifact>*:*</artifact>
@@ -91,6 +98,12 @@
             <artifactId>Slimefun4</artifactId>
             <version>2024.3.1</version>
             <scope>provided</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.github.baked-libs</groupId>
+                    <artifactId>dough-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
