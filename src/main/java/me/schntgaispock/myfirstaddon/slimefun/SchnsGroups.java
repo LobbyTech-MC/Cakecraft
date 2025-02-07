@@ -5,7 +5,6 @@ import org.bukkit.NamespacedKey;
 
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-
 import me.schntgaispock.myfirstaddon.MyFirstAddon;
 
 public class SchnsGroups {

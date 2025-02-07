@@ -1,5 +1,7 @@
 package me.schntgaispock.myfirstaddon.slimefun.items;
 
+import java.io.ObjectInputFilter.Config;
+
 import org.bukkit.ChatColor;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -17,7 +19,6 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactive;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
 import lombok.NonNull;
-import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 
 public class RadioactiveCake extends SlimefunItem implements Radioactive {
@@ -53,9 +54,8 @@ public class RadioactiveCake extends SlimefunItem implements Radioactive {
                 return false;
             }
 
-            @Override
             public void tick(Block b, SlimefunItem arg1, Config data) {
-                b.getWorld().spawnParticle(Particle.VILLAGER_ANGRY, b.getX() + 0.5d, b.getY() - 0.5d, b.getZ() + 0.5d, 5, .2d, .2d, .2d, 2.0d);
+                b.getWorld().spawnParticle(Particle.ANGRY_VILLAGER, b.getX() + 0.5d, b.getY() - 0.5d, b.getZ() + 0.5d, 5, .2d, .2d, .2d, 2.0d);
             }
 
         };

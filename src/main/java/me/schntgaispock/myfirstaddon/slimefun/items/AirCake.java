@@ -1,7 +1,7 @@
 package me.schntgaispock.myfirstaddon.slimefun.items;
 
+import java.io.ObjectInputFilter.Config;
 import java.util.Collection;
-
 
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -17,7 +17,6 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactive;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
 import io.github.thebusybiscuit.slimefun4.core.handlers.BlockUseHandler;
 import lombok.NonNull;
-import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 
 public class AirCake extends SlimefunItem implements Radioactive {
@@ -49,14 +48,6 @@ public class AirCake extends SlimefunItem implements Radioactive {
             @Override
             public boolean isSynchronized() {
                 return false;
-            }
-
-            @Override
-            public void tick(Block b, SlimefunItem arg1, Config data) {
-                Collection<Entity> players = b.getWorld().getNearbyEntities(new BoundingBox(b.getX(), b.getY(), b.getZ(), b.getX()+1, b.getY()+1, b.getZ()+1));
-                for (Entity player : players) {
-                    player.setVelocity(player.getVelocity().clone().setY(2));
-                }
             }
         };
     }
