@@ -49,6 +49,13 @@ public class AirCake extends SlimefunItem implements Radioactive {
             public boolean isSynchronized() {
                 return false;
             }
+
+            public void tick(Block b, SlimefunItem arg1, Config data) {
+                Collection<Entity> players = b.getWorld().getNearbyEntities(new BoundingBox(b.getX(), b.getY(), b.getZ(), b.getX()+1, b.getY()+1, b.getZ()+1));
+                for (Entity player : players) {
+                    player.setVelocity(player.getVelocity().clone().setY(2));
+                }
+            }
         };
     }
 
